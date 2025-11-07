@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TES FINAL ZAPPAR 2</title>
-    
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://libs.zappar.com/zappar-aframe/2.1.6/zappar-aframe.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TES FINAL ZAPPAR BISA BISMILLAH</title>
+
+  <!-- A-Frame + Zappar -->
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://libs.zappar.com/zappar-aframe/2.1.6/zappar-aframe.js"></script>
 </head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene
+    zappar-scene
+    device-orientation-permission-ui="enabled: true"
+    renderer="colorManagement: true;"
+  >
+    <!-- Kamera -->
+    <a-entity zappar-camera></a-entity>
 
-<body style="margin:0; overflow:hidden;">
-    <a-scene zappar-scene>
-        
-        <a-assets>
-            <a-asset-item id="marker-keris" src="kartu-final.zpt"/>
-        </a-assets>
+    <!-- Marker -->
+    <a-assets>
+      <a-asset-item id="marker-keris" src="kartu-final.zpt"></a-asset-item>
+    </a-assets>
 
-        <a-entity zappar-camera></a-entity>
-
-        <a-entity zappar-image="target: #marker-keris;">
-            
-            <a-box color="green" scale="0.1 0.1 0.1" position="0 0.05 0"></a-box>
-            
-        </a-entity>
-
-    </a-scene>
+    <!-- Objek di atas marker -->
+    <a-entity zappar-image="target: #marker-keris" id="keris-marker">
+      <a-box color="green" position="0 0.05 0" scale="0.2 0.2 0.2"></a-box>
+    </a-entity>
+  </a-scene>
 </body>
 </html>
-
-
